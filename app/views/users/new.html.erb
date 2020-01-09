@@ -1,0 +1,11 @@
+<div class="container">
+  <div class="text-center">
+
+    <%= form_for @user do |f| %>
+      <p>Your name: <%= f.text_field :name %></p>
+      <p>Your twitter URL: <%= f.text_field :url %></p>
+      <%= f.submit %>
+    <% end %>
+
+  </div>
+</div>
