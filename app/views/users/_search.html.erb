@@ -1,0 +1,10 @@
+<% if !@users.empty? %>
+  <% @users.each do |user| %>
+    <p>Name: <%= user.name %></p>
+    <p>Username: <%= user.username %></p>
+    <p>Description: <%= user.description %></p>
+    <p>URL: <%= user.url %></p>
+  <% end %>
+<% else %>
+  <p>No users match your criteria</p>
+<% end %>

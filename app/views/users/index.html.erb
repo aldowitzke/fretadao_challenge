@@ -1,0 +1,17 @@
+<div class="container text-center">
+
+  <%= search_form_for @q do |f| %>
+    <%= f.label :username_or_description_cont, 'Search by username or description' %>
+    <%= f.search_field :username_or_description_cont %>
+    <%= f.submit %>
+  <% end %>
+
+
+  <%= link_to  "New twitter account", new_user_path %>
+
+  <% if params[:q].nil? %>
+    <%= render 'user_info', user: @user %>
+  <% else %>
+    <%= render 'search', users: @users %>
+  <% end %>
+</div>

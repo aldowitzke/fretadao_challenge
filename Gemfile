@@ -35,7 +35,6 @@ gem 'jbuilder', '~> 2.5'
 
 gem 'nokogiri'
 gem 'httparty'
-gem 'pry'
 gem 'ransack'
 
 group :development, :test do
@@ -44,6 +43,7 @@ group :development, :test do
   # Adds support for Capybara system testing and selenium driver
   gem 'capybara', '>= 2.15'
   gem 'selenium-webdriver'
+  gem 'pry-byebug'
 end
 
 group :development do

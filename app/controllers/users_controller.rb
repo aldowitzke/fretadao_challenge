@@ -1,4 +1,13 @@
 class UsersController < ApplicationController
+
+  def index
+    @user = User.last
+    if params
+      @q = User.ransack(params[:q])
+      @users = @q.result(distinct: true)
+    end
+  end
+
   def new
     @user = User.new
   end
@@ -6,11 +15,10 @@ class UsersController < ApplicationController
   def create
     @user = User.new(user_params)
     @user = Scraper.call(@user).value
-    binding.pry
     if @user.save
-      render 'pages/index'
+      redirect_to root_path
     else
-      render 'new'
+      render :new
     end
   end
 
