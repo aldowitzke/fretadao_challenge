@@ -11,15 +11,13 @@ class Scraper
   def initialize(user)
     @user = user
     @url = user.url
-    # @url = user.url
-    # @username = user.username
-    # @description = user.description
   end
 
   def call
     parse_page
     get_username
     get_user_description
+    get_user_image
     self
   end
 
@@ -33,6 +31,10 @@ class Scraper
 
   def get_user_description
     @user.description = @parsed_page.css('p.ProfileHeaderCard-bio.u-dir').text
+  end
+
+  def get_user_image
+    @user.image_url = @parsed_page.css('img.ProfileAvatar-image').attribute("src").value
   end
 
   def parse_page
