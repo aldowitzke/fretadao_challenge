@@ -14,11 +14,15 @@ class UsersController < ApplicationController
 
   def create
     @user = User.new(user_params)
-    @user = Scraper.call(@user).value
-    if @user.save
-      redirect_to root_path
-    else
+
+    begin
+      @user = Scraper.call(@user).value
+    rescue
+      flash[:alert] = "Twitter user not found. Please, verify your twitter url."
       render :new
+    else
+      @user.save
+      redirect_to root_path
     end
   end
 
