@@ -1,6 +1,6 @@
 <% if !@users.empty? %>
   <% @users.each do |user| %>
-    <div class="card-product">
+    <div class="card-product mb-4">
       <img src=<%= user.image_url %> />
       <div class="card-product-infos">
         <p class="font-weight-bold"><%= user.name %></p>
