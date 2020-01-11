@@ -1,13 +1,17 @@
-<div class="container text-center">
-
+<div class="container">
   <%= search_form_for @q do |f| %>
-    <%= f.label :username_or_description_cont, 'Search by username or description' %>
-    <%= f.search_field :username_or_description_cont %>
-    <%= f.submit %>
+    <div class="search-form-control form-group mt-3">
+      <%= f.search_field :username_or_description_cont, class: "form-control string required" %>
+      <%= f.submit 'Search', class: "btn btn-flat" %>
+    </div>
   <% end %>
 
-
-  <%= link_to  "New twitter account", new_user_path %>
+  <div class="text-center mb-3 mt-3">
+    <%= link_to("Home", root_path, class: "btn btn-flat") unless current_page?(root_path) %>
+    <%= link_to new_user_path, class: "btn btn-gradient" do %>
+      <i class="fab fa-twitter"></i> New twitter account
+    <% end %>
+  </div>
 
   <% if params[:q].nil? %>
     <%= render 'user_info', user: @user %>

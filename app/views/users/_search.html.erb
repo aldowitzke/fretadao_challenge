@@ -1,10 +1,17 @@
 <% if !@users.empty? %>
   <% @users.each do |user| %>
-    <p>Name: <%= user.name %></p>
-    <p>Username: <%= user.username %></p>
-    <p>Description: <%= user.description %></p>
-    <p>URL: <%= user.url %></p>
+    <div class="card-product">
+      <img src=<%= user.image_url %> />
+      <div class="card-product-infos">
+        <p class="font-weight-bold"><%= user.name %></p>
+        <p class="font-weight-light">@<%= user.username %></p>
+        <p class="font-weight-light"><%= user.description %></p>
+        <%= link_to user.url, user.url, target: :blank, class: "font-weight-light" %>
+      </div>
+    </div>
   <% end %>
 <% else %>
-  <p>No users match your criteria</p>
+  <div class="flash flash-danger alert alert-dismissible fade show" role="alert">
+    <span><strong>Oops!</strong> 😱 No users were found with your criteria.</span>
+  </div>
 <% end %>
