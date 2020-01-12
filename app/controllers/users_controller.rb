@@ -42,16 +42,6 @@ class UsersController < ApplicationController
 
   private
 
-  def save_user(user)
-    if user.save
-      flash[:success] = "Your user has been created! 🥳"
-      redirect_to root_path
-    else
-      flash[:warning] = "Username or URL can't be blank"
-      render :new
-    end
-  end
-
   def edit_scrap(user)
     begin
       @user = Scraper.call(user).value
@@ -59,9 +49,27 @@ class UsersController < ApplicationController
       flash[:danger] = "Twitter user not found 😕. Please, verify your twitter url."
       render :edit
     else
-      @user.save
+      edit_user(user)
+    end
+  end
+
+  def edit_user(user)
+    if @user.save
       flash[:success] = "Your user has been updated! 🥳"
       redirect_to @user
+    else
+      flash[:warning] = "Name or URL can't be blank"
+      render :new
+    end
+  end
+
+  def save_user(user)
+    if user.save
+      flash[:success] = "Your user has been created! 🥳"
+      redirect_to root_path
+    else
+      flash[:warning] = "Name or URL can't be blank"
+      render :new
     end
   end
 
