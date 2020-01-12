@@ -1,6 +1,6 @@
 # Fretadão challenge
 
-## Portuguese (English version right after)
+## Português (English version right after)
 
 Essa é uma aplicação web criada para o desafio do Fretadão. 
 O objetivo da aplicação é utilizar o web-scraping para trazer informações de um usuário cadastrado no Twitter.
