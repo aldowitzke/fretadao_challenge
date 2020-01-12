@@ -8,6 +8,7 @@
         <p class="font-weight-light"><%= user.description %></p>
         <%= link_to user.url, user.url, target: :blank, class: "font-weight-light" %><br>
         <%= link_to 'Edit user', edit_user_path(user.id), class: "btn btn-flat mt-2 mb-2" %>
+        <%= link_to 'Show user', user_path(user.id), class: "btn btn-gradient mt-2 mb-2" %>
       </div>
     </div>
   <% end %>
