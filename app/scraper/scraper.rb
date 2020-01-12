@@ -26,7 +26,7 @@ class Scraper
   end
 
   def get_username
-    @user.username = @parsed_page.css('a.ProfileHeaderCard-nameLink.u-textInheritColor').text
+    @user.username = @parsed_page.css('span.username.u-dir > b.u-linkComplex-target')[0].text
   end
 
   def get_user_description
