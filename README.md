@@ -28,7 +28,7 @@ Para instalar o projeto, rode os seguintes códigos no seu terminal dentro do se
 ```
 1) Abra seu terminal e clone o projeto:
 git clone https://github.com/aldowitzke/fretadao_challenge.git
-# É possível que será pedido suas credenciais para clonar o repositório
+# É possível que seja pedido suas credenciais para clonar o repositório
 
 2) Entre no novo diretório criado
 cd fretadao_challenge
