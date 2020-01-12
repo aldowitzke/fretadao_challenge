@@ -36,6 +36,7 @@ gem 'jbuilder', '~> 2.5'
 gem 'nokogiri'
 gem 'httparty'
 gem 'ransack'
+gem 'shorturl', '~> 1.0'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
@@ -48,7 +49,6 @@ group :development, :test do
   gem 'vcr', require: false
   gem 'webmock'
   gem 'shoulda-matchers'
-  gem 'shorturl', '~> 1.0'
   gem 'factory_bot_rails'
 end
 
