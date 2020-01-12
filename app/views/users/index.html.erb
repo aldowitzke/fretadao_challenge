@@ -7,7 +7,7 @@
 
   <%= search_form_for @q do |f| %>
     <div class="search-form-control form-group mt-3">
-      <%= f.search_field :username_or_description_cont, class: "form-control string required" %>
+      <%= f.search_field :username_or_name_or_description_cont, class: "form-control string required" %>
       <%= f.submit 'Search', class: "btn btn-flat" %>
     </div>
     <small class="form-text text-muted mt-n3">* This search bar is accent sensitive.</small>

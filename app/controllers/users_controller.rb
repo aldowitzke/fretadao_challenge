@@ -21,6 +21,7 @@ class UsersController < ApplicationController
       render :new
     else
       @user.save
+      flash[:success] = "You user has been created! 🥳"
       redirect_to root_path
     end
   end
@@ -47,7 +48,7 @@ class UsersController < ApplicationController
       render :edit
     else
       @user.save
-      flash[:success] = "Your user has been updated!"
+      flash[:success] = "Your user has been updated! 🥳"
       redirect_to root_path
     end
   end
