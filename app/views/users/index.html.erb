@@ -1,4 +1,10 @@
 <div class="container">
+  <% if flash[:alert] %>
+    <div class="alert flash flash-danger"><%= flash_message %></div>
+  <% elsif flash[:success] %>
+    <div class="alert flash flash-success"><%= flash[:success] %></div>
+  <% end %>
+
   <%= search_form_for @q do |f| %>
     <div class="search-form-control form-group mt-3">
       <%= f.search_field :username_or_description_cont, class: "form-control string required" %>
