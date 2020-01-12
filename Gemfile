@@ -48,6 +48,7 @@ group :development, :test do
   gem 'vcr', require: false
   gem 'webmock'
   gem 'shoulda-matchers'
+  gem 'shorturl', '~> 1.0'
 end
 
 group :development do
