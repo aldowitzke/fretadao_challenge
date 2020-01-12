@@ -18,7 +18,7 @@ class UsersController < ApplicationController
     begin
       @user = Scraper.call(@user).value
     rescue
-      flash[:alert] = "Twitter user not found. Please, verify your twitter url."
+      flash[:alert] = "Twitter user not found 😕. Please, verify your twitter url."
       render :new
     else
       @user.save

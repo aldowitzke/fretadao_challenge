@@ -1,6 +1,3 @@
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.11/jquery.mask.min.js"></script>
-
 <div class="container">
   <% if flash[:alert] %>
       <div class="alert flash flash-danger"><%= flash[:alert] %></div>
@@ -14,13 +11,9 @@
     <div class="form-group">
       <label for="url">Twitter URL</label>
       <%= f.text_field :url, value: "https://twitter.com/", class: "form-control", id: "user-url" %>
-      <small class="form-text text-muted">Note you need to use http or https url. i.e: https://twitter.com./google</small>
+      <small class="form-text text-muted">Note you need to use http or https url. i.e: https://twitter.com/google</small>
     </div>
     <%= link_to  "Go back", root_path, class: "btn btn-flat"  %>
     <%= f.submit "Create", class: "btn btn-gradient" %>
   <% end %>
 </div>
-
-<!-- <script type="text/javascript">
-  $("#user-url").mask("https://twitter.com/")
-</script> -->
