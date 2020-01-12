@@ -86,7 +86,7 @@ Run the following commands inside your projects directory:
 1) Open your terminal and let's clone the repo:
 
 https://github.com/aldowitzke/fretadao_challenge.git
-# É possível que será pedido suas credenciais para clonar o repositório
+# It is possible you will be asked for credentials.
 
 2) Let's config:
 bundle install
