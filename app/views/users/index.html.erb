@@ -1,7 +1,6 @@
 <div class="container">
-  <% if flash[:alert] %>
-    <div class="alert flash flash-danger"><%= flash[:alert] %></div>
-  <% end %>
+
+  <%= render 'layouts/alerts' %>
 
   <%= search_form_for @q do |f| %>
     <div class="search-form-control form-group mt-3">

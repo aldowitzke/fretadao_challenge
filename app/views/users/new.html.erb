@@ -1,7 +1,5 @@
 <div class="container">
-  <% if flash[:alert] || flash[:success] %>
-    <div class="alert flash flash-danger"><%= flash[:alert] %></div>
-  <% end %>
+  <%= render 'layouts/alerts' %>
 
   <%= form_for @user do |f| %>
     <div class="form-group">
