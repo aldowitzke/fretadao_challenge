@@ -27,18 +27,22 @@ Para os testes feitos:
 Para instalar o projeto, rode os seguintes códigos no seu terminal dentro do seu dirétorio de projetos:
 ```
 1) Abra seu terminal e clone o projeto:
-
-https://github.com/aldowitzke/fretadao_challenge.git
+git clone https://github.com/aldowitzke/fretadao_challenge.git
 # É possível que será pedido suas credenciais para clonar o repositório
 
-2) Vamos configurar:
+2) Entre no novo diretório criado
+cd fretadao_challenge
+
+3) Vamos configurar:
 bundle install
 rails db:setup
 
-3) Rode o servidor:
+4) Rode o servidor:
 rails server
 
-4) Para rodar os testes:
+5) Abra http://localhost:3000/ em seu navegador
+
+6) Para rodar os testes:
 rspec (ou rake)
 ```
 
@@ -85,17 +89,22 @@ Run the following commands inside your projects directory:
 ```
 1) Open your terminal and let's clone the repo:
 
-https://github.com/aldowitzke/fretadao_challenge.git
+git clone https://github.com/aldowitzke/fretadao_challenge.git
 # It is possible you will be asked for credentials.
 
-2) Let's config:
+2) Enter your new directory
+cd fretadao_challenge
+
+3) Let's config:
 bundle install
 rails db:setup
 
-3) Run the server:
+4) Run the server:
 rails server
 
-4) If you like, run the tests
+5) Run http://localhost:3000/ on your browser.
+
+5) If you like, run the tests
 rspec (or rake)
 ```
 
