@@ -44,6 +44,10 @@ group :development, :test do
   gem 'capybara', '>= 2.15'
   gem 'selenium-webdriver'
   gem 'pry-byebug'
+  gem 'rspec-rails'
+  gem 'vcr', require: false
+  gem 'webmock'
+  gem 'shoulda-matchers'
 end
 
 group :development do
