@@ -4,12 +4,11 @@ require 'vcr_helper'
 RSpec.describe Scraper do
   describe '#get_url' do
     context 'when the URL responds successfully' do
-      let(:user) { User.create!(name: 'Fretadão', url: 'https://twitter.com/usefretadao') }
+      let(:user) { build(:user) }
 
       it 'gets website title' do
         VCR.use_cassette :twitter do
           title = Scraper.new(user).parse_page.title
-
           expect(title).to eq('Fretadão (@usefretadao) | Twitter')
         end
       end
@@ -17,7 +16,7 @@ RSpec.describe Scraper do
       it 'gets user username' do
         VCR.use_cassette :twitter do
           twitter_user = Scraper.call(user).value
-          expect(twitter_user.username).to eq('Fretadão')
+          expect(twitter_user.username).to eq('usefretadao')
         end
       end
 

@@ -1,9 +1,7 @@
 require 'rails_helper'
 
 RSpec.describe User, type: :model do
-  let(:user) do
-    User.create!(name: 'Fretadão', url: 'https://twitter.com/usefretadao')
-  end
+  let(:user) { build(:user) }
 
   context "when user is valid" do
     it { is_expected.to validate_presence_of(:name) }

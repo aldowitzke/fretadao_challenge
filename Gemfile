@@ -49,6 +49,7 @@ group :development, :test do
   gem 'webmock'
   gem 'shoulda-matchers'
   gem 'shorturl', '~> 1.0'
+  gem 'factory_bot_rails'
 end
 
 group :development do
