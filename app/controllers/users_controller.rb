@@ -54,9 +54,9 @@ class UsersController < ApplicationController
   end
 
   def edit_user(user)
-    if @user.save
+    if user.save
       flash[:success] = "Your user has been updated! 🥳"
-      redirect_to @user
+      redirect_to user
     else
       flash[:warning] = "Name or URL can't be blank"
       render :new
