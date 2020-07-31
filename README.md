@@ -18,7 +18,7 @@ Para os testes feitos:
 - [RSpec](https://rspec.info/)
 - [VCR](https://github.com/vcr/vcr)
 - [Webmock](https://github.com/bblimke/webmock)
-- [Shouldmatchers](https://github.com/thoughtbot/shoulda-matchers)
+- [Shoulda Matchers](https://github.com/thoughtbot/shoulda-matchers)
 - [FactoryBot](https://github.com/thoughtbot/factory_bot)
 
 
@@ -79,7 +79,7 @@ For testing:
 - [RSpec](https://rspec.info/)
 - [VCR](https://github.com/vcr/vcr)
 - [Webmock](https://github.com/bblimke/webmock)
-- [Shouldmatchers](https://github.com/thoughtbot/shoulda-matchers)
+- [Shoulda Matchers](https://github.com/thoughtbot/shoulda-matchers)
 - [FactoryBot](https://github.com/thoughtbot/factory_bot)
 
 ### Getting started
